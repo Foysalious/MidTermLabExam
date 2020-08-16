@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div style="text-align: left;">
+      <h1>My Profile</h1>
+      <ul>
+        <li>
+          Username: <%= user.username %>
+        </li>
+        <li>
+          Phone: <%= user.userData.phone %>
+        </li>
+        <li>
+          Address: <%= user.userData.address %>
+        </li>
+        <li>
+          gender: <%= user.userData.gender %>
+        </li>
+        <li>
+          designation: <%= user.userData.designation %>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

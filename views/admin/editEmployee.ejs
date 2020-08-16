@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Employee</title>
+</head>
+
+<body>
+  <h1>Edit Employee</h1>
+  <form method="POST">
+    <fieldset>
+      <legend>Update user</legend>
+      <label for="username">Username: </label>
+      <input type="text" value="<%= user.username %>" name="username" id="username" />
+      <br />
+      <br />
+
+      <label for="Phone">Phone: </label>
+      <input type="text" value="<%= user.userData.phone %>" name="phone" id="Phone" />
+      <br />
+      <br />
+
+      
+
+      <% const designation = user.userData.designation %>
+
+      <label for="designation">designation: </label>
+      <select name="designation" id="designation">
+        <option value="owner" <%if(designation == 'owner'){%> <%="selected"%> <%}%> >Owner </option>
+        <option value="manager" <%if(designation == 'manager'){%> <%="selected"%> <%}%>>Manager </option>
+        <option value="employee" <%if(designation == 'employee'){%> <%="selected"%> <%}%>>Employee </option>
+      </select>
+
+
+        <br />
+        <br />
+
+      <button type="submit">Update the Employee</button>
+    </fieldset>
+  </form>
+</body>
+
+</html>

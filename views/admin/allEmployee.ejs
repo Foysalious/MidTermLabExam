@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Employee</title>
+  </head>
+  <body>
+    <h1>All Employee</h1>
+
+    <table border="1" style="border-collapse: collapse;">
+      <tr>
+        <td>ID</td>
+        <td>Username</td>
+        <td>Phone</td>
+        <td>Gender</td>
+        <td>Address</td>
+        <td>Designation</td>
+        <td>Actions</td>
+      </tr>
+      <% users.forEach(user => { %>
+      <tr>
+        <td>
+          <%= user.id %>
+        </td>
+        <td>
+          <%= user.username %>
+        </td>
+        <td>
+          <%= user.userData.phone %>
+        </td>
+        <td>
+          <%= user.userData.gender %>
+        </td>
+        <td>
+          <%= user.userData.designation %>
+        </td>
+        <td>
+          <%= user.userData.address %>
+        </td>
+        <td>
+          <a href="update/<%= user.id %>">Update</a>
+          <a href="delete/<%= user.id %>">Delete</a>
+        </td>
+      </tr>
+      <% });%>
+    </table>
+  </body>
+</html>
